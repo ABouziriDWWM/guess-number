@@ -41,13 +41,13 @@ inputGuess.addEventListener("keydown", function (event) {
     // guess est correct, on compte les tentatives
     else {
       attempts++;
-      previousAnswers.unshift("attempt \n " + attempts + ":  " + guess + "\n");
+      previousAnswers.unshift("attempt " + attempts + ":  " + guess + "\n");
       let attemptNumber = document.createElement("p");
       // afficher le tableau en texte dans la balise p de id = "answers"
       document
         .getElementById("answers")
         .appendChild(attemptNumber).textContent = previousAnswers[0];
-      console.log(previousAnswers);
+      //console.log(previousAnswers);
 
       // guess plus grand que la réponse
       if (guess > answer) {
@@ -63,6 +63,11 @@ inputGuess.addEventListener("keydown", function (event) {
           "CORRECT! the answer took you " + attempts + " attempts";
         // les tentatives doit etre remise a zéro
         attempts = 0;
+        // enregistrer les tentatives y compris la réponse si le joueur à gagner
+        localStorage.setItem(
+          "previousAnswers",
+          JSON.stringify(previousAnswers)
+        );
         previousAnswers = [];
       }
     }
@@ -71,6 +76,13 @@ inputGuess.addEventListener("keydown", function (event) {
   }
   // pour déclancher un nouveau jeu
   recommencerBtn.onclick = function () {
+    // dernier historique de tentatives
+    const storedArrayString = localStorage.getItem("previousAnswers");
+
+    // Convertion en tableau pour l'afficher
+    const storedArray = storedArrayString ? JSON.parse(storedArrayString) : [];
+    console.log("historique: \n" + storedArray);
+
     // une nouvelle réponse
     answer = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
     texte.textContent = "New Game !";
