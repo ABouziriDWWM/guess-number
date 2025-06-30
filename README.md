@@ -1,4 +1,4 @@
-🎯 Number Guesser
+##🎯 Number Guesser
 Un petit jeu JavaScript interactif où le joueur doit deviner un nombre aléatoire entre 30 et 100. Le jeu se joue directement dans le navigateur via une interface simple avec un champ de saisie et des messages d’aide.
 
 
