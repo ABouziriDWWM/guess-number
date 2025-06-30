@@ -12,6 +12,9 @@ Indique si le nombre est trop grand ou trop petit
 Indique le nombre de tentatives réussies
 ✅ Bouton pour relancer une nouvelle partie sans recharger la page
 
+### local storage (JSON)
+récuperer le dernier historique de tentatives de deviner
+
 ## index.jsx: chaque instruction est bien commenté et compréhensible. 
 
 # 📂 Fichiers
