@@ -19,6 +19,8 @@ index.html → Fichier HTML contenant la structure (champ texte, input, p pour l
 
 index.js → Le code du jeu (fourni ci-dessous)
 
+style.css → le style simple du jeu
+
 # 🕹️ Règles du jeu
 1️⃣ Le jeu génère automatiquement un nombre aléatoire entre 30 et 100.
 2️⃣ L’utilisateur saisit un nombre dans le champ prévu et appuie sur Entrée.
