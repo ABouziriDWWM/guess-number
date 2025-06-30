@@ -17,12 +17,12 @@ Indique le nombre de tentatives réussies
 # 📂 Fichiers
 index.html → Fichier HTML contenant la structure (champ texte, input, p pour les messages)
 
-index.js → Le code du jeu (fourni ci-dessous)
+index.js → Le code du jeu
 
 style.css → le style simple du jeu
 
 # 🕹️ Règles du jeu
-1️⃣ Le jeu génère automatiquement un nombre aléatoire entre 30 et 100.
+1️⃣ Le jeu génère automatiquement un nombre aléatoire entre 30 et 100 (modifiable).
 2️⃣ L’utilisateur saisit un nombre dans le champ prévu et appuie sur Entrée.
 3️⃣ Le jeu indique :
 
@@ -31,6 +31,8 @@ Too high! Try again si le nombre proposé est trop grand
 Too low! Try again si le nombre proposé est trop petit
 
 CORRECT! the answer took you X attempts si la réponse est juste
+
+Les tentatives en numéro
 
 4️⃣ Après une bonne réponse, un bouton New Guess permet de générer un nouveau nombre et de recommencer une partie.
 
