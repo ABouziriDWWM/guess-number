@@ -1,11 +1,73 @@
-#input {
-  width: 20vh;
-  height: 10vh;
-  font-size: 1.5em;
-  text-align: center;
+/* Corps de la page : centré, propre, agréable */
+body {
+  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 20px;
 }
 
+/* Texte des consignes et des résultats */
 .text {
-  font-size: 1.5em;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.9rem;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Champ de saisie du nombre */
+#input {
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 8px;
+  text-align: center;
+  width: 200px;
+  outline: none;
+  transition: box-shadow 0.3s;
+}
+
+#input:focus {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Affichage des tentatives précédentes */
+#answers {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 8px;
+  width: 350px;
+  max-height: 350px;
+  overflow-y: auto;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+  margin-top: 15px;
+  font-size: 0.95rem;
+  white-space: pre-line; /* pour afficher \n comme des sauts de ligne */
+}
+
+/* Bouton "New Guess" dynamique */
+button {
+  background-color: #ff9800;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #e68900;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
 }

@@ -27,7 +27,7 @@ inputGuess.addEventListener("keydown", function (event) {
     document.getElementById("output").textContent = "you entered: " + guess;
     // console.log("voila " + guess);
     console.log("reponse " + answer);
-    //  si guess n'est pas un nombre, voir input index.html
+    //  si guess n'est pas un nombre, voir input dans index.html
     //   if (isNaN(guess)) {
     //     texte.textContent = "Please enter a number";
     //     running = false;
@@ -57,6 +57,7 @@ inputGuess.addEventListener("keydown", function (event) {
       else if (guess < answer) {
         texte.textContent = "Too low! Try again";
       }
+
       // la réponse est correct
       else {
         texte.textContent =
